@@ -77,7 +77,7 @@ ORDER BY popularity desc LIMIT 10;
 
 -- 7) What's the average danceability for the 10 most popular songs?
 
-SELECT AVG(danceability)
+SELECT popularity, AVG(danceability)
 FROM Spotifydata
-ORDER BY popularity desc LIMIT 10;
+GROUP BY popularity LIMIT 10;
 
